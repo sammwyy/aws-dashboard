@@ -6,6 +6,7 @@ import Other from "./pages/other";
 
 import Navbar from "./components/navbar/navbar";
 import PageBreadcrumb from "./components/breadcrumb/breadcrumb";
+import Sidebar from "./components/sidebar/sidebar";
 
 import "./assets/sass/mainStyle.sass";
 
@@ -15,16 +16,23 @@ function App() {
       <Router>
         <Navbar />
         <div className="app">
-          <PageBreadcrumb />
-          <Switch>
-            <Route path="/" exact>
-              <Main />
-            </Route>
+          <div className="wrapper">
+            <Sidebar />
+            <div className="container">
+              <PageBreadcrumb />
+              <div className="view">
+                <Switch>
+                  <Route path="/" exact>
+                    <Main />
+                  </Route>
 
-            <Route path="/other" exact>
-              <Other />
-            </Route>
-          </Switch>
+                  <Route path="/other" exact>
+                    <Other />
+                  </Route>
+                </Switch>
+              </div>
+            </div>
+          </div>
         </div>
       </Router>
     </ChakraProvider>
