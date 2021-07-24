@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { MdHome } from "react-icons/md";
 
 import { AiFillGift } from "react-icons/ai";
-import { BsGearFill } from "react-icons/bs";
+import { BsGearFill, BsCardText } from "react-icons/bs";
 import { HiCollection } from "react-icons/hi";
 
 import CardDeck from "../components/cards/carddeck";
@@ -14,10 +14,47 @@ export default function Main ({ setSidebarContent }) {
     /* Sidebar */
     useEffect(() => {
         setSidebarContent([
+            { section: "Quick links" },
             { content: "Home", icon: MdHome, url: "/" },
             { content: "API", icon: HiCollection, url: "/" },
             { content: "Credits", icon: AiFillGift, url: "/" },
-            { content: "Settings", icon: BsGearFill, url: "/" }
+            { content: "Settings", icon: BsGearFill, url: "/" },
+            { content: "Submit Feedback", icon: BsCardText, url: "/" },
+
+            { section: "Explore AWS" },
+            {
+                url: "/",
+                content: 
+                    <div>
+                        <b>Amazon Redshift</b>
+                        <p>Fast, simple, cost-effective data warehouse that can extend queries to your data lake.</p>
+                    </div>,
+            },
+            {
+                url: "/",
+                content: 
+                    <div>
+                        <b>Run Serverless Containers with AWS Fargate</b>
+                        <p>AWS Fargate runs and scales your containers without having to manage servers or clusters.</p>
+                    </div>,
+            },
+            {
+                url: "/",
+                content: 
+                    <div>
+                        <b>Scalable, Durable, Secure Backup & Restore with Amazon S3</b>
+                        <p>Discover how customers are building backup & restore solutions on AWS that save money.</p>
+                    </div>,
+            },
+
+            {
+                url: "/",
+                content: 
+                    <div>
+                        <b>AWS Marketplace</b>
+                        <p>Find, buy, and deploy popular software products that run on AWS.</p>
+                    </div>,
+            }
         ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

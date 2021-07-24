@@ -47,9 +47,15 @@ const getComponentsFromContent = (content = []) => {
   const result = [];
 
   for (let item of content) {
-    result.push(
-      <NavItem to={item.url} icon={item.icon}>{item.content}</NavItem>
-    )
+    if (item.section) {
+      result.push(
+        <NavItem>{item.section}</NavItem>
+      )
+    } else {
+      result.push(
+        <NavItem to={item.url} icon={item.icon}>{item.content}</NavItem>
+      )
+    }
   }
 
   return result;
@@ -91,7 +97,7 @@ export default function Sidebar({ content }) {
       as="section"
       bg={useColorModeValue("gray.50", "gray.700")}
       minH="100vh"
-      width="200px"
+      width="250px"
       marginRight="50px"
       display="inline-flex"
     >
