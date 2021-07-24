@@ -9,25 +9,32 @@ import PageBreadcrumb from "./components/breadcrumb/breadcrumb";
 import Sidebar from "./components/sidebar/sidebar";
 
 import "./assets/sass/mainStyle.sass";
+import { useState } from "react";
 
 function App() {
+  const [ sidebarContent, setSidebarContent ] = useState(null);
+
+  const props = {
+    setSidebarContent
+  }
+
   return (
     <ChakraProvider>
       <Router>
         <Navbar />
         <div className="app">
           <div className="wrapper">
-            <Sidebar />
+            { sidebarContent && <Sidebar content={sidebarContent} /> }
             <div className="container">
               <PageBreadcrumb />
               <div className="view">
                 <Switch>
-                  <Route path="/" exact>
-                    <Main />
+                  <Route path="/this/is/an/example/page" exact>
+                    <Main {...props} />
                   </Route>
 
                   <Route path="/other" exact>
-                    <Other />
+                    <Other {...props} />
                   </Route>
                 </Switch>
               </div>

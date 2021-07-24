@@ -1,9 +1,11 @@
+import styles from "./breadcrumb.module.sass"
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
 } from "@chakra-ui/react"
+import { Link } from "react-router-dom";
 
 function getPathObjects () {
     const result = [{
@@ -35,14 +37,14 @@ function getPathComponents () {
     for (let path of paths) {
         components.push(
             <BreadcrumbItem>
-                <BreadcrumbLink href={path.url}>{path.name}</BreadcrumbLink>
+                <BreadcrumbLink as={Link} to={path.url}>{path.name}</BreadcrumbLink>
             </BreadcrumbItem>
         )
     }
 
     components.push(
         <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href={last.url} color="orange">{last.name}</BreadcrumbLink>
+            <BreadcrumbLink as={Link} to={last.url} color="orange">{last.name}</BreadcrumbLink>
         </BreadcrumbItem>
     );
 
@@ -53,8 +55,8 @@ export default function PageBreadcrumb () {
     const items = getPathComponents();
 
     return (
-        <div>
-            <Breadcrumb spacing="8px" separator={<ChevronRightIcon color="gray.500" />}>
+        <div className={styles["breadcrumb"]}>
+            <Breadcrumb className={styles["container"]} spacing="8px" separator={<ChevronRightIcon color="gray.500" />}>
                 { items }
             </Breadcrumb>
         </div>

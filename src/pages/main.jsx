@@ -1,4 +1,11 @@
-export default function Main () {
+import { useEffect } from "react"
+
+export default function Main ({ setSidebarContent }) {
+    
+    useEffect(() => {
+        setSidebarContent({});
+    }, []);
+
     return (
         <div>
             <h1>Hello World</h1>
