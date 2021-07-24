@@ -7,6 +7,7 @@ import { HiCollection } from "react-icons/hi";
 
 import CardDeck from "../components/cards/carddeck";
 import CardInfo from "../components/cards/cardinfo";
+import CardLink from "../components/cards/cardlink";
 
 export default function Main ({ setSidebarContent }) {
     
@@ -63,8 +64,119 @@ export default function Main ({ setSidebarContent }) {
                 />
             </CardDeck>
 
-            <h1>Hello World</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam impedit est saepe minus autem obcaecati laboriosam. Fugiat omnis aperiam maiores commodi? Eum, enim magni pariatur quo quod atque illum.</p>
+            <CardDeck title="Build a solution" description="Get started with simple wizards and automated workflows.">
+                <CardLink
+                    title="Launch a virtual machine"
+                    description="With EC2"
+                    time="2-3 minutes"
+                    url="/"
+                    icon={
+                        <img src="/ec2.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Build a web app"
+                    description="With Elastic Beanstalk"
+                    time="6 minutes"
+                    url="/"
+                    icon={
+                        <img src="/ebs.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Build using virtual servers"
+                    description="With Lightsail"
+                    time="1-2 minutes"
+                    url="/"
+                    icon={
+                        <img src="/lightsail.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Connect an IoT device"
+                    description="With AWS IoT"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/iot.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Start a development project"
+                    description="With CodeStar"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/codestar.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Register a domain"
+                    description="With Route 53"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/route53.png" alt="Support icon"/>
+                    }
+                />
+            </CardDeck>
+        
+            <CardDeck title="Learn to build" description="Learn to deploy your solutions through step-by-step guides, labs and videos.">
+                <CardLink
+                    title="Websites and Web Apps"
+                    description="3 videos, 3 tutorials, 3 labs"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/webapp.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Storage"
+                    description="3 videos, 3 tutorials, 3 labs"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/storage.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Databases"
+                    description="3 videos, 3 tutorials, 3 labs"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/database.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="DevOps"
+                    description="3 videos, 3 tutorials, 3 labs"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/devops.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Machine Learning"
+                    description="3 videos, 3 tutorials, 3 labs"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/machinelearning.png" alt="Support icon"/>
+                    }
+                />
+                <CardLink
+                    title="Big Data"
+                    description="3 videos, 1 lab"
+                    time="5 minutes"
+                    url="/"
+                    icon={
+                        <img src="/bigdata.png" alt="Support icon"/>
+                    }
+                />
+            </CardDeck>
         </div>
     )
 }
