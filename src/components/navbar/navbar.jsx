@@ -1,4 +1,4 @@
-import { BellIcon, MoonIcon, SearchIcon } from "@chakra-ui/icons";
+import { MoonIcon, SearchIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Avatar,
   Button,
@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import styles from "./navbar.module.sass";
 import NavLink from "./navlink";
+import Notifications from "./notifications";
 
 export default function Navbar() {
   return (
@@ -38,6 +39,12 @@ export default function Navbar() {
           </div>
 
           <div className={styles["account"]}>
+          <Button variant="ghost" padding="5" margin="2">
+              <img width="22px" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Ireland_flag_300.png" alt="Ireland Flag" />
+              <Text className={styles["username"]}>Ireland</Text>
+              <ChevronDownIcon />
+            </Button>
+
             <IconButton
               margin="2"
               variant="ghost"
@@ -48,7 +55,7 @@ export default function Navbar() {
               margin="2"
               variant="ghost"
               aria-label="Notifications"
-              icon={<BellIcon />}
+              icon={<Notifications />}
             />
 
             <Button variant="ghost" padding="5" margin="2">
