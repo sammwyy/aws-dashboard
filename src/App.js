@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -9,7 +10,7 @@ import PageBreadcrumb from "./components/breadcrumb/breadcrumb";
 import Sidebar from "./components/sidebar/sidebar";
 
 import "./assets/sass/mainStyle.sass";
-import { useState } from "react";
+import "./assets/sass/quick.sass";
 
 function App() {
   const [ sidebarContent, setSidebarContent ] = useState(null);
