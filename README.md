@@ -1,6 +1,6 @@
-# 🌸 AWS PoC
+# 🌸 AWS Dashboard Design
 
-Proof of concept on re-design for the AWS dashboard (Amazon Web Services) built in React, Sass, Chakra-UI and Choc-UI.
+A little re-design for the AWS dashboard (Amazon Web Services) built in React, Sass, Chakra-UI and Choc-UI.
 
 ### 🤔 Why?
 
